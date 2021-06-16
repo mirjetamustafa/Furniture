@@ -71,6 +71,5 @@
         </div>
      </div>
 
-     hello
 
    <?php include "inc/footer.php"?>
