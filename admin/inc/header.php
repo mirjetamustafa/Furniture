@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require_once "autoloader.php"; ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +13,7 @@
 </head>
 <body class="sb-nav-fixted">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a href="index.php" class="navbar-brand">Mob Admin</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
+        <a href="index.php" class="navbar-brand">Furniture Admin</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search -->
         <form action="" class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
             <div class="input-group">

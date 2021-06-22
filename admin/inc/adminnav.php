@@ -12,13 +12,13 @@
                         </a>
                         <a href="#" class="nav-link collapsed" data-toggle="collapse" data-target="#userNav" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                            Users
+                            Admin
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="userNav" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a href="#" class="nav-link">Add User</a>
-                                <a href="" class="nav-link">View Users</a>
+                                <a href="add_admin.php" class="nav-link">Add Admin</a>
+                                <a href="admins.php" class="nav-link">View Admin</a>
                             </nav>
                         </div>
                         <a href="" class="nav-link collapsed" data-toggle="collapse" data-target="#catNav" aria-expanded="false" aria-controls="catNav">
@@ -34,7 +34,7 @@
                         </div>
                         <a href="" class="nav-link collapsed" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                            Posts
+                            Produkti
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="catNav" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
