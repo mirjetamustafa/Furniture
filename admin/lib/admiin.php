@@ -4,6 +4,12 @@ namespace Admin\Lib;
 use \PDO;
 
 class Admiin extends Database {
+
+    //emri i tabeles
+    protected static $db_table = "admin";
+
+    //fushat qe perdoren per metoden create
+    protected static $db_table_fields = array('full_name','username','password');
     
     private $admin_id;
     
@@ -12,6 +18,18 @@ class Admiin extends Database {
     private $username;
     
     private $password;
+
+    protected function properties()
+    {
+        $properties = array();
+        //veqorive ose metodave statike ju qasemi me fjalen kyqe self
+        foreach(self::$db_table_fields as $db_field) {
+            if(property_exists($this, $db_field)) {
+                $properties[$db_field] = $this->$db_field;
+            }
+        }
+        return $properties;
+    }
 
     public function find_all_admin() {
         
@@ -99,11 +117,11 @@ class Admiin extends Database {
 
             $stmt->execute();
 
-            echo "Admin added successfully";
+            echo "<div class='text-success'>Admin added successfully</div>";
         }
 
         catch(PDOException $e) {
-            echo "Error in admin registration process " . $e->getMessage();
+            echo "<div class='text-danger'>Error in admin registration process </div>" . $e->getMessage();
         }
     }
 
@@ -125,11 +143,11 @@ class Admiin extends Database {
 
             $stmt->execute();
 
-            echo "Admin modified successfully";
+            echo "<div class='text-success'>Admin modified successfully</div>";
         }
 
         catch(PDOException $e) {
-            echo "Error in admin modified process " . $e->getMessage();
+            echo "<div class='text-danger'>Error in admin modified process </div>" . $e->getMessage();
         }
     }
 
@@ -143,11 +161,30 @@ class Admiin extends Database {
 
             $stmt->execute();
 
-            echo "Admin deleted successfully";
+            echo "<div class='text-success'>Admin deleted successfully</div>";
         }
         catch(PDOException $e) {
 
-            echo "Error in admin deletion process " .$e->getMessage();
+            echo "<div class='text-danger'>Error in admin deletion process </div>" .$e->getMessage();
+        }
+    }
+
+    public function create(){
+        try{
+            $properties = $this->properties();
+
+            $sql = "INSERT INTO " . self::$db_table . "(" . implode(",",array_keys($properties)) . ")";
+
+            $sql.= "VALUES ('".implode("','",array_values($properties)). "')";
+
+            $stmt = $this->prepare($sql);
+
+            $stmt->execute();
+
+            echo "<div class='text-success'>Admin added succesfully</div>";
+        }
+        catch(PDOException $e){
+            die("<div class='text-danger'>Error during the registration proccess".$e->getMessage());
         }
     }
 }
