@@ -28,8 +28,8 @@
                         </a>
                         <div class="collapse" id="catNav" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a href="" class="nav-link">Add Category</a>
-                                <a href="" class="nav-link">View Categories</a>
+                                <a href="add_category.php" class="nav-link">Add Category</a>
+                                <a href="categories.php" class="nav-link">View Categories</a>
                             </nav>
                         </div>
                         <a href="" class="nav-link collapsed" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -39,8 +39,8 @@
                         </a>
                         <div class="collapse" id="catNav" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a href="" class="nav-link">Add Furniture</a>
-                                <a href="" class="nav-link">View Furniture</a>
+                                <a href="add_produkt.php" class="nav-link">Add Furniture</a>
+                                <a href="produktet.php" class="nav-link">View Furniture</a>
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Addons</div>

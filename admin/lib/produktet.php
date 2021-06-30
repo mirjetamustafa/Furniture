@@ -10,19 +10,19 @@ class Produktet extends Database {
     protected static $db_table = "produkti";
 
     //fushat qe perdoren per metoden create
-    protected static $db_table_fields = array('name','description','price','image_name','category_id');
+    protected static $db_table_fields = array('name','description','price','image_name');
 
-    private $id;
+    public $id;
 
-    private $name;
+    public $name;
 
-    private $description;
+    public $description;
 
-    private $price;
+    public $price;
 
-    private $image_name;
+    public $image_name;
 
-    private $category_id;
+  
 
     public function setId($id){
         $this->id = $id;
@@ -59,12 +59,7 @@ class Produktet extends Database {
         return $this->image_name;
     }
 
-    public function setCategory_id($category_id){
-        $this->category_id = $category_id;
-    }
-    public function getCategory_id(){
-        return $this->category_id;
-    }
+   
 
     // public function find_all_produkti(){
     //     $sql = "SELECT * FROM produkti";

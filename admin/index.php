@@ -123,6 +123,7 @@
                                         <thead>
                                             <tr>
                                             <th>Name</th>
+                                            <th>Description</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -132,6 +133,7 @@
                                                 foreach($category->find_all() as $cate) {
                                                     echo "<tr>";
                                                     echo "<td>".$cate->getName()."</td>";
+                                                    echo "<td>".$cate->getDescription()."</td>";
                                                     echo "</tr>";
                                                 }
 
@@ -143,6 +145,7 @@
                                         <tfooter>
                                             <tr>
                                                 <th>Name</th>
+                                                <th>Description</th>
                                             </tr>
                                         </tfooter>
                                     </table>
@@ -166,8 +169,8 @@
 
                                         foreach($produkti_result as $pro){
                                             echo "<tr>";
-                                            echo "<td>".$pro->getName."</td>";
-                                            echo "<td>".$pro->getDescription."</td>";
+                                            echo "<td>".$pro->getName()."</td>";
+                                            echo "<td>".$pro->getDescription()."</td>";
                                         }
 
                                         // $pro_result = $produkti->find_produkti_id(1);

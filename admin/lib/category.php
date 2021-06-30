@@ -10,11 +10,15 @@ class Category extends Database {
     protected static $db_table = "category";
 
     //fushat qe perdoren per metoden create
-    protected static $db_table_fields = array('name');
+    protected static $db_table_fields = array('name','description');
 
-    private $id;
+    public $id;
 
-    private $name;
+    public $name;
+
+    public $description;
+
+  
 
     public function setId($id){
         $this->id = $id;
@@ -30,8 +34,17 @@ class Category extends Database {
         return $this->name;
     }
 
-    // public function find_all_categories(){
-    //     $sql = "SELECT * FROM category";
+    public function setDescription($description){
+        $this->description = $description;
+    }
+    public function getDescription(){
+        return $this->description;
+    }
+
+   
+
+    // public function find_all_produkti(){
+    //     $sql = "SELECT * FROM produkti";
 
     //     $stmt = $this->prepare($sql);
 
@@ -40,14 +53,14 @@ class Category extends Database {
     //     return $stmt->fetchAll(PDO::FETCH_OBJ);
     // }
 
-    // public function find_category_id($category_id){
-    //     $this->category_id = $category_id;
+    // public function find_produkti_id($produkti_id){
+    //     $this->produkti_id = $produkti_id;
 
-    //     $sql = "SELECT * FROM category WHERE category_id = :category_id";
+    //     $sql = "SELECT * FROM produkti WHERE produkti_id = :produkti_id";
 
     //     $stmt = $this->prepare($sql);
 
-    //     $stmt->bindParam(':category_id',$this->category_id);
+    //     $stmt->bindParam(':produkti_id', $this->produkti_id);
 
     //     $stmt->execute();
 
