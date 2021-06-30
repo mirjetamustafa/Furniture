@@ -13,11 +13,11 @@
             <div class="row justify-content-center">
                 <?php
                     $admin= new Admiin();
-                    if(isset($_GET['admin_id'])){
-                        $admin=$admin->find_admin_id($_GET['admin_id']);
+                    if(isset($_GET['id'])){
+                        $admin=$admin->find_id($_GET['id']);
                         }
                         if(isset($_POST['delete_admin'])){
-                            $admin->delete_admin();
+                            $admin->delete();
                     }
                 ?>
             <div class="col-lg-9">

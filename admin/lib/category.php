@@ -2,18 +2,25 @@
 
 namespace Admin\Lib;
 
-use \PDO;
+use \PDO,\PDOException;
 
 class Category extends Database {
-    private $category_id;
+
+    //emri i tabeles
+    protected static $db_table = "category";
+
+    //fushat qe perdoren per metoden create
+    protected static $db_table_fields = array('name');
+
+    private $id;
 
     private $name;
 
-    public function setCategory_id($category_id){
-        $this->category_id = $category_id;
+    public function setId($id){
+        $this->id = $id;
     }
-    public function getCategory_id(){
-        return $this->category_id;
+    public function getId(){
+        return $this->id;
     }
 
     public function setName($name){
@@ -23,27 +30,27 @@ class Category extends Database {
         return $this->name;
     }
 
-    public function find_all_categories(){
-        $sql = "SELECT * FROM category";
+    // public function find_all_categories(){
+    //     $sql = "SELECT * FROM category";
 
-        $stmt = $this->prepare($sql);
+    //     $stmt = $this->prepare($sql);
 
-        $stmt->execute();
+    //     $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
-    }
+    //     return $stmt->fetchAll(PDO::FETCH_OBJ);
+    // }
 
-    public function find_category_id($category_id){
-        $this->category_id = $category_id;
+    // public function find_category_id($category_id){
+    //     $this->category_id = $category_id;
 
-        $sql = "SELECT * FROM category WHERE category_id = :category_id";
+    //     $sql = "SELECT * FROM category WHERE category_id = :category_id";
 
-        $stmt = $this->prepare($sql);
+    //     $stmt = $this->prepare($sql);
 
-        $stmt->bindParam(':category_id',$this->category_id);
+    //     $stmt->bindParam(':category_id',$this->category_id);
 
-        $stmt->execute();
+    //     $stmt->execute();
 
-        return $stmt->fetchObject();
-    }
+    //     return $stmt->fetchObject();
+    // }
 }

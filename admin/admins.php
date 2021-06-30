@@ -27,14 +27,14 @@
                             <tbody>
                                 <?php
                                     $admin = new Admiin();
-                                    foreach($admin->find_all_admin() as $admin) {
+                                    foreach($admin->find_all() as $admin) {
                                         echo "<tr>";
                                         echo "<td>".$admin->getFull_name()."</td>";
                                         echo "<td>".$admin->getUsername()."</td>";
                                         echo "<td>".$admin->getPassword()."</td>";
-                                        echo "<td><a href='edit_admin.php?admin_id=". $admin->getAdmin_id() ."'><i class='fas fa-edit mr-2'>
+                                        echo "<td><a href='edit_admin.php?id=". $admin->getId() ."'><i class='fas fa-edit mr-2'>
                                         </i>Edit</a></td>";
-                                        echo "<td><a href='delete_admin.php?admin_id=". $admin->getAdmin_id() ."'><i class='far fa-trash-alt mr-2'>
+                                        echo "<td><a href='delete_admin.php?id=". $admin->getId() ."'><i class='far fa-trash-alt mr-2'>
                                         </i>Delete</a></td>";
                                         echo "</tr>";
                                     }

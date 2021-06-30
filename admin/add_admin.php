@@ -17,7 +17,7 @@
                         $admin->setFull_name($_POST['full_name']);
                         $admin->setUsername($_POST['username']);
                         $admin->setPassword($_POST['password']);
-                        $admin->create_admin();
+                        $admin->create();
                     }
                 ?>
                 <div class="col-lg-9">

@@ -88,24 +88,7 @@
                                             <?php
                                                 $admin = new Admiin();
 
-                                                //Shtimi i shenimeve per admin
-
-                                                // $admin->setFull_name("Besarta Mustafa");
-                                                // $admin->setUsername("Besarta");
-                                                // $admin->setPassword("123456");
-
-                                                // $admin->create_admin();
-
-                                                //Modifikimi i shenmeve per admin
-                                                // $admin = $admin->find_admin_id(3);
-                                                // $admin->setUsername("Besa");
-                                                // $admin->update_admin();
-
-                                                //Fshirja e shenimeve per admin
-                                                // $admin = $admin->find_admin_id(2);
-                                                // $admin->delete_admin();
-
-                                                foreach($admin->find_all_admin() as $admin) {
+                                                foreach($admin->find_all() as $admin) {
                                                     echo "<tr>";
                                                     echo "<td>".$admin->getFull_name()."</td>";
                                                     echo "<td>".$admin->getUsername()."</td>";
@@ -146,16 +129,14 @@
                                             <?php
                                                 $category = new Category();
 
-                                                $category_result = $category->find_all_categories();
-
-                                                foreach($category_result as $cat) {
+                                                foreach($category->find_all() as $cate) {
                                                     echo "<tr>";
-                                                    echo "<td>".$cat->name."</td>";
+                                                    echo "<td>".$cate->getName()."</td>";
                                                     echo "</tr>";
                                                 }
 
-                                                $cat_result=$category->find_category_id(1);
-                                                echo $cat_result->name;
+                                                // $cat_result=$category->find_id(1);
+                                                // echo $cat_result->name;
 
                                             ?>
                                         </tbody>
@@ -181,12 +162,12 @@
                                     <?php
                                         $produkti = new Produktet();
 
-                                        $produkti_result = $produkti->find_all_produkti();
+                                        $produkti_result = $produkti->find_all();
 
                                         foreach($produkti_result as $pro){
                                             echo "<tr>";
-                                            echo "<td>".$pro->name."</td>";
-                                            echo "<td>".$pro->description."</td>";
+                                            echo "<td>".$pro->getName."</td>";
+                                            echo "<td>".$pro->getDescription."</td>";
                                         }
 
                                         // $pro_result = $produkti->find_produkti_id(1);

@@ -2,11 +2,17 @@
 
 namespace Admin\Lib;
 
-use \PDO;
+use \PDO,\PDOException;
 
 class Produktet extends Database {
 
-    private $produkti_id;
+    //emri i tabeles
+    protected static $db_table = "produkti";
+
+    //fushat qe perdoren per metoden create
+    protected static $db_table_fields = array('name','description','price','image_name','category_id');
+
+    private $id;
 
     private $name;
 
@@ -18,11 +24,11 @@ class Produktet extends Database {
 
     private $category_id;
 
-    public function setProdukti_id($produkti_id){
-        $this->produkti_id = $produkti_id;
+    public function setId($id){
+        $this->id = $id;
     }
-    public function getProdukti_id(){
-        return $this->produkti_id;
+    public function getId(){
+        return $this->id;
     }
 
     public function setName($name){
@@ -60,27 +66,27 @@ class Produktet extends Database {
         return $this->category_id;
     }
 
-    public function find_all_produkti(){
-        $sql = "SELECT * FROM produkti";
+    // public function find_all_produkti(){
+    //     $sql = "SELECT * FROM produkti";
 
-        $stmt = $this->prepare($sql);
+    //     $stmt = $this->prepare($sql);
 
-        $stmt->execute();
+    //     $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
-    }
+    //     return $stmt->fetchAll(PDO::FETCH_OBJ);
+    // }
 
-    public function find_produkti_id($produkti_id){
-        $this->produkti_id = $produkti_id;
+    // public function find_produkti_id($produkti_id){
+    //     $this->produkti_id = $produkti_id;
 
-        $sql = "SELECT * FROM produkti WHERE produkti_id = :produkti_id";
+    //     $sql = "SELECT * FROM produkti WHERE produkti_id = :produkti_id";
 
-        $stmt = $this->prepare($sql);
+    //     $stmt = $this->prepare($sql);
 
-        $stmt->bindParam(':produkti_id', $this->produkti_id);
+    //     $stmt->bindParam(':produkti_id', $this->produkti_id);
 
-        $stmt->execute();
+    //     $stmt->execute();
 
-        return $stmt->fetchObject();
-    }
+    //     return $stmt->fetchObject();
+    // }
 }
