@@ -17,7 +17,6 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Description</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
@@ -29,7 +28,6 @@
                                     foreach($category->find_all() as $cat) {
                                         echo "<tr>";
                                         echo "<td>".$cat->getName()."</td>";
-                                        echo "<td>".$cat->getDescription()."</td>";
                                         echo "<td><a href='edit_category.php?id=". $cat->getId() ."'><i class='fas fa-edit mr-2'>
                                         </i>Edit</a></td>";
                                         echo "<td><a href='delete_category.php?id=". $cat->getId() ."'><i class='far fa-trash-alt mr-2'>
@@ -41,7 +39,6 @@
                             <tfooter>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Description</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>

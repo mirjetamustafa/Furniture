@@ -14,10 +14,10 @@
                 <?php
                     if(isset($_POST['add_produkt'])){
                         $produkti = new Produktet();
-                        $produkti->setName($_POST['name']);
-                        $produkti->setDescription($_POST['description']);
-                        $produkti->setPrice($_POST['price']);
-                        $produkti->setImage_name($_POST['image_name']);
+                        $produkti->setName($_POST['name']); 
+                        $produkti->setDescription($_POST['description']); 
+                        $produkti->setPrice($_POST['price']); 
+                        $produkti->setImage_name($_POST['image_name']); 
                        
                         $produkti->create();
                     }
@@ -31,23 +31,23 @@
                         <div class="card-body">
                             <form method="post" action="">
                                 <div class="form-group">
-                                    <label class="small mb-1" for="firstname">FullName :</label>
-                                    <input class="form-control py4" name="name" id="name" type="text" placeholder="Enter name" />
+                                    <label class="small mb-1" for="firstname">Name :</label>
+                                    <input class="form-control py4" name="name" id="name" type="text" placeholder="Enter Name" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="small mb-1" for="lastname">Description :</label>
-                                    <input class="form-control py4" name="description" id="description" type="text" placeholder="Enter description" />
+                                    <label class="small mb-1" for="firstname">Description :</label>
+                                    <textarea name="description"  cols="35" rows="5"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="small mb-1" for="email">Price :</label>
-                                    <input class="form-control py4" name="price" id="price" type="text" placeholder="Enter price" />
+                                    <label class="small mb-1" for="firstname">Price :</label>
+                                    <input class="form-control py4" name="price" id="name" type="text" placeholder="Enter Price" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="small mb-1" for="email">Image :</label>
-                                    <input class="form-control py4" name="image_name" id="image_name" type="text" />
+                                    <label class="small mb-1" for="firstname">Image :</label>
+                                    <input class="form-control py4" name="image_name" type="text" placeholder="Enter Image" />
                                 </div>
                                 
-                                <input class="btn btn-primary" id="login" value="Create Produkt" type="submit" name="add_produkt"/>
+                                <input class="btn btn-primary" id="login" value="Create Category" type="submit" name="add_produkt"/>
                             </form>
                         </div>
                         <div class="card-footer text-center">

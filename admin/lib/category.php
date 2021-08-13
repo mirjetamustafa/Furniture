@@ -16,7 +16,6 @@ class Category extends Database {
 
     public $name;
 
-    public $description;
 
   
 
@@ -34,12 +33,7 @@ class Category extends Database {
         return $this->name;
     }
 
-    public function setDescription($description){
-        $this->description = $description;
-    }
-    public function getDescription(){
-        return $this->description;
-    }
+   
 
    
 

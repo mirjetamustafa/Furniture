@@ -14,8 +14,7 @@
                 <?php
                     if(isset($_POST['add_category'])){
                         $category = new Category();
-                        $category->setName($_POST['name']);
-                        $category->setDescription($_POST['description']);
+                        $category->setName($_POST['name']); 
                        
                         $category->create();
                     }
@@ -31,10 +30,6 @@
                                 <div class="form-group">
                                     <label class="small mb-1" for="firstname">Name :</label>
                                     <input class="form-control py4" name="name" id="name" type="text" placeholder="Enter Name" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="small mb-1" for="lastname">Description :</label>
-                                    <input class="form-control py4" name="description" id="description" type="text" placeholder="Enter description" />
                                 </div>
                                 
                                 <input class="btn btn-primary" id="login" value="Create Category" type="submit" name="add_category"/>

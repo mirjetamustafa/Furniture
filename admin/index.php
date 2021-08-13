@@ -123,7 +123,6 @@
                                         <thead>
                                             <tr>
                                             <th>Name</th>
-                                            <th>Description</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -133,7 +132,7 @@
                                                 foreach($category->find_all() as $cate) {
                                                     echo "<tr>";
                                                     echo "<td>".$cate->getName()."</td>";
-                                                    echo "<td>".$cate->getDescription()."</td>";
+                                                   
                                                     echo "</tr>";
                                                 }
 
@@ -145,7 +144,6 @@
                                         <tfooter>
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Description</th>
                                             </tr>
                                         </tfooter>
                                     </table>
@@ -159,6 +157,8 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Description</th>
+                                        <th>Price</th>
+                                        <th>Image</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -171,6 +171,8 @@
                                             echo "<tr>";
                                             echo "<td>".$pro->getName()."</td>";
                                             echo "<td>".$pro->getDescription()."</td>";
+                                            echo "<td>".$pro->getPrice()."</td>";
+                                            echo "<td>".$pro->getImage_name()."</td>";
                                         }
 
                                         // $pro_result = $produkti->find_produkti_id(1);
@@ -183,6 +185,8 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Description</th>
+                                        <th>Price</th>
+                                        <th>Image</th>
                                     </tr>
                                 </tfooter>
 
