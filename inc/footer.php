@@ -1,5 +1,4 @@
-<?php include 'inc/header.php'; ?>
-    <!-- Start Footer -->
+<!-- Start Footer -->
     <footer class="container-fluid">
         <div class="row text-white text-center" id="row">
             <div class="col-3 mt-5">

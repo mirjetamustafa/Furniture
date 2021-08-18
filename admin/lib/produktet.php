@@ -61,29 +61,29 @@ class Produktet extends Database {
 
    
 
-    public function find_all_produkti(){
-        $sql = "SELECT * FROM produkti";
+    // public function find_all_produkti(){
+    //     $sql = "SELECT * FROM produkti";
 
-        $stmt = $this->prepare($sql);
+    //     $stmt = $this->prepare($sql);
 
-        $stmt->execute();
+    //     $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
-    }
+    //     return $stmt->fetchAll(PDO::FETCH_OBJ);
+    // }
 
-    public function find_produkti_id($produkti_id){
-        $this->produkti_id = $produkti_id;
+    // public function find_produkti_id($produkti_id){
+    //     $this->produkti_id = $produkti_id;
 
-        $sql = "SELECT * FROM produkti WHERE produkti_id = :produkti_id";
+    //     $sql = "SELECT * FROM produkti WHERE produkti_id = :produkti_id";
 
-        $stmt = $this->prepare($sql);
+    //     $stmt = $this->prepare($sql);
 
-        $stmt->bindParam(':produkti_id', $this->produkti_id);
+    //     $stmt->bindParam(':produkti_id', $this->produkti_id);
 
-        $stmt->execute();
+    //     $stmt->execute();
 
-        return $stmt->fetchObject();
-    }
+    //     return $stmt->fetchObject();
+    // }
 
    
 }

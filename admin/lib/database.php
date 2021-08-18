@@ -4,7 +4,10 @@ namespace Admin\Lib;
 use Exception, PDO,PDOException,ReflectionClass;
 
 
-require_once "../config/config.php";
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "mobileri");
 
 class Database {
      

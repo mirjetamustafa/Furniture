@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 
-body{
+.body{
     background-color: rgb(58, 133, 133);
     margin: 0;
     padding: 0;
@@ -102,7 +102,7 @@ body{
 
 /* End Header */
 /* Start Footer */
-.row{
+#row{
     position: relative;
     font-family: 'Montserrat', sans-serif;
     width: 102.3%;
@@ -115,3 +115,46 @@ body{
     height: 20%;
 }
 /* End Footer */
+
+/* Start Sidebar */
+.side{
+    float: left;
+	width: 26%;
+	border: 1px solid #444;
+	height: 1200px;
+}
+.side ul{
+	list-style-type: none;
+    text-align: center;
+    padding-right: 50px;
+}
+.side ul li a{
+    padding: 15px  30px;
+	text-decoration: none;
+	font-size: 18px;
+	color: #444;
+	text-align: center;
+}
+.side ul li a:hover{
+    color: orange;
+}
+.maiin{
+    border-top: 1px solid #444;
+}
+/* End Sidebar */
+
+
+/* Start Main */
+.main{
+    float: right;
+    border: 1px solid #444;
+    width: 72%;
+}
+.card-img-top{
+    border: 1px solid #444;
+    
+}
+.stars{
+    color: orange;
+}
+/* End Main */
