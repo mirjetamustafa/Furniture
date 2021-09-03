@@ -32,10 +32,6 @@
                                 <label class="small mb-1" for="firstname">Name :</label>
                                 <input class="form-control py-4" value="<?php echo $category->getName();?>" name="name"readonly id="name" type="text" />
                             </div>
-                            <div class="form-group">
-                                <label class="small mb-1" for="lastname">Description :</label>
-                                <input class="form-control py-4" name="description" value="<?php echo $category->getDescription();?>" id="description" readonly type="text" placeholder="Enter description" />
-                            </div>
                         
                             <input class="btn btn-primary" id="login" value="Delete Category" type="submit" name="delete_category"/>
                         </form>

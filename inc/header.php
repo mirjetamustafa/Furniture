@@ -12,7 +12,8 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,9 +27,9 @@
                     <li class="nav-item"><a href="collection.php" class="nav-link">Collection</a></li>
                 </ul>
                 <a href=""><img src="img/icon.png" alt=""></a>
-                <button class="navbar-toggler" data-target="#meny" data-toggle="collapse"> 
+                <!-- <button class="navbar-toggler" data-target="#meny" data-toggle="collapse"> 
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
                 <div class="collapse navbar-collapse" id="meny">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="promo.php" class="nav-link">Promo</a></li>

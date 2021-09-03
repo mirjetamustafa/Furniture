@@ -1,5 +1,5 @@
 <aside class="side mt-5 ml-2">
-    <div>
+    <div class="sidebar">
         <h3 class="text-center mt-5">Categories</h3>
         <?php
             $category = new \Admin\Lib\Category();
